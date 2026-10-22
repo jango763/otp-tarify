@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Тарифы ОТП МБ</title>
+<style>
+:root{--bg:#f4f5f7;--card:#fff;--tx:#14181f;--mu:#667085;--bd:#e2e5ea;--ac:#0b7a43;--ac2:#e6f4ec;--wr:#b54708;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1216;--card:#1a1f26;--tx:#eef1f5;--mu:#98a2b3;--bd:#2b323c;--ac:#3ecf8e;--ac2:#12301f;--wr:#f79009}}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.4 -apple-system,system-ui,"Segoe UI",Roboto,sans-serif;padding-bottom:70px}
+.w{max-width:640px;margin:0 auto;padding:12px}
+h1{font-size:20px;margin:6px 0 2px}.sub{color:var(--mu);font-size:13px;margin-bottom:10px}
+.tabs{display:flex;gap:6px;position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);padding:6px 0;z-index:5}
+.tabs button{flex:1;padding:10px;border:1px solid var(--bd);background:var(--card);color:var(--tx);border-radius:10px;font-size:15px}
+.tabs button.on{background:var(--ac);color:#fff;border-color:var(--ac)}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:12px;margin:10px 0}
+.g{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+label{display:block;font-size:12px;color:var(--mu);margin-bottom:3px}
+input[type=text],input[type=search]{width:100%;padding:10px;border:1px solid var(--bd);border-radius:10px;background:var(--bg);color:var(--tx);font-size:16px}
+.ck{display:flex;gap:8px;align-items:flex-start;font-size:14px;margin:8px 0}.ck input{margin-top:3px;width:20px;height:20px}
+details>summary{cursor:pointer;font-weight:600;padding:2px 0}
+.res{border:1px solid var(--bd);border-radius:14px;background:var(--card);margin:8px 0;padding:12px}
+.res.best{border:2px solid var(--ac);background:var(--ac2)}
+.rh{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.nm{font-weight:700}.pr{font-size:20px;font-weight:800;white-space:nowrap}.yr{font-size:12px;color:var(--mu);text-align:right}
+.bd{font-size:13px;color:var(--mu);margin-top:6px}.bd div{display:flex;justify-content:space-between;gap:8px;padding:1px 0}
+.tag{display:inline-block;font-size:11px;background:var(--ac);color:#fff;border-radius:6px;padding:1px 6px;margin-left:6px}
+.wr{color:var(--wr);font-size:12px;margin-top:4px}
+.it{border-bottom:1px solid var(--bd);padding:10px 0}.it:last-child{border:0}
+.it b{display:block}.it .v{color:var(--ac);font-weight:700}.it .n{font-size:13px;color:var(--mu);margin-top:2px}
+.disc{font-size:12px;color:var(--mu);margin:10px 0}
+</style></head><body><div class="w">
+<h1>Тарифы ОТП Банк · Малый бизнес</h1><div class="sub">Действуют с 28.09.2026 · оценка для консультации</div>
+<div class="tabs"><button id="t1" class="on">Подбор</button><button id="t3">Валюта</button><button id="t2">Справочник</button></div>
+
+<div id="p1">
+<div class="card"><div class="g">
+<div><label>СДО на р/с в рублях, ₽ (прошлый месяц)</label><input type="text" inputmode="numeric" id="sdo" value="500000"></div>
+<div><label>Платежей в другие банки, шт/мес (все, кроме СБП)</label><input type="text" inputmode="numeric" id="pay" value="20"></div>
+<div><label>Взнос наличных в кассе, ₽/мес</label><input type="text" inputmode="numeric" id="dep" value="0"></div>
+<div><label>Снятие наличных, ₽/мес</label><input type="text" inputmode="numeric" id="wd" value="0"></div>
+<div><label>Переводы физлицам в ОТП, ₽/мес (без ЗП/дивидендов)</label><input type="text" inputmode="numeric" id="ii" value="0"></div>
+<div><label>Переводы физлицам в др. банки, ₽/мес (без ЗП)</label><input type="text" inputmode="numeric" id="io" value="0"></div>
+<div><label>ИП: вывод доходов на свой счёт в др. банке, ₽/мес</label><input type="text" inputmode="numeric" id="ip" value="0"></div>
+</div>
+<label class="ck"><input type="checkbox" id="prem"><span>Для «Уверенный рост Премиум»: кто-то из руководства/бенефициаров выполняет критерии по продуктам физлиц (остатки от 1,5 млн, вклады/комиссионный от 1,5 млн или кредиты от 3 млн)</span></label>
+<details><summary>ВЭД (валютные операции)</summary>
+<div class="g" style="margin-top:8px">
+<div><label>Курс USD, ₽</label><input type="text" inputmode="decimal" id="usd" value="90"></div>
+<div><label>Курс EUR, ₽</label><input type="text" inputmode="decimal" id="eur" value="100"></div>
+<div><label>Переводы в EUR, ₽-экв./мес</label><input type="text" inputmode="numeric" id="ea" value="0"></div>
+<div><label>…штук</label><input type="text" inputmode="numeric" id="en" value="0"></div>
+<div><label>Переводы в др. валютах (не USD), ₽-экв.</label><input type="text" inputmode="numeric" id="oa" value="0"></div>
+<div><label>…штук</label><input type="text" inputmode="numeric" id="on" value="0"></div>
+<div><label>Валютные платежи+поступления для агента вал. контроля, ₽-экв.</label><input type="text" inputmode="numeric" id="va" value="0"></div>
+<div><label>…штук</label><input type="text" inputmode="numeric" id="vn" value="0"></div>
+</div></details></div>
+<div id="out"></div>
+<div class="disc">Расчёт приблизительный: НДС добавлен только на вал. контроль (п. 10.1), ставка задаётся на вкладке «Валюта»; без СБП и разовых услуг (открытие валютного счёта и т.п.), без учёта первого месяца подключения. Лимиты и ставки считаются нарастающим итогом за календарный месяц. Для снятия сверх лимита пакета применены стандартные ступени п. 6.2.1. Перед обещанием клиенту сверяйте с PDF.</div>
+</div>
+
+<div id="p3" style="display:none">
+<div class="card"><b>Курсы (вводите вручную)</b><div class="g" style="margin-top:8px">
+<div><label>USD, курс ЦБ ₽</label><input type="text" inputmode="decimal" id="fu" value="90"></div>
+<div><label>EUR, курс ЦБ ₽</label><input type="text" inputmode="decimal" id="fe" value="100"></div>
+<div><label>CNY, курс ЦБ ₽</label><input type="text" inputmode="decimal" id="fc" value="12.5"></div>
+<div><label>Др. валюта, курс ЦБ ₽ за 1 ед.</label><input type="text" inputmode="decimal" id="fo" value="1"></div>
+<div><label>Курс банка (продажа) для выбранной валюты, ₽</label><input type="text" inputmode="decimal" id="fb" value="101"></div>
+<div><label>НДС, % (в Тарифах не указан; с 01.01.2026 — 22%)</label><input type="text" inputmode="decimal" id="fv" value="22"></div></div><div class="sub" id="fdt" style="margin:6px 0 0">Курсы сохраняются на этом телефоне и подставляются на вкладку «Подбор»</div></div>
+<div class="card"><div class="g">
+<div><label>Валюта</label><select id="fcur" style="width:100%;padding:10px;border-radius:10px;border:1px solid var(--bd);background:var(--bg);color:var(--tx);font-size:16px"><option value="EUR">EUR</option><option value="CNY">CNY</option><option value="OTH">Другая (кроме USD)</option></select></div>
+<div><label>Операция</label><select id="fd" style="width:100%;padding:10px;border-radius:10px;border:1px solid var(--bd);background:var(--bg);color:var(--tx);font-size:16px"><option value="pay">Платёж за рубеж</option><option value="in">Поступление</option></select></div>
+<div><label>Сумма одной операции, в валюте</label><input type="text" inputmode="decimal" id="fa" value="10000"></div>
+<div><label>Таких операций в месяц</label><input type="text" inputmode="numeric" id="fn" value="1"></div></div>
+<div class="sub" style="margin-top:8px">СДО берётся с вкладки «Подбор»</div>
+<label class="ck"><input type="checkbox" id="fx1"><span>Код операции из Приложения 1 (вал. контроль не берётся)</span></label>
+<label class="ck"><input type="checkbox" id="fnr"><span>Получатель в банке-нерезиденте и код из п. 3.3.3 (+1%)</span></label>
+<label class="ck"><input type="checkbox" id="f36"><span>Товары без ввоза в РФ или на счёт нерезидента (коды 12060, 12800, 13020, 13800): +3,6% при сумме свыше 3 млн ₽</span></label>
+<label class="ck"><input type="checkbox" id="fcr"><span>Поступление: код из п. 5.1 (комиссия за зачисление EUR 2%, CNY 1%)</span></label>
+<label class="ck"><input type="checkbox" id="fbuy"><span>Клиент покупает валюту за рубли в банке</span></label>
+<label class="ck"><input type="checkbox" id="fold"><span>Валютный счёт открыт до 01.03.2022 (конверсия 0,35% вместо 0%)</span></label>
+<label class="ck"><input type="checkbox" id="fab"><span>Учитывать абонплату пакета</span></label></div>
+<div id="fout"></div>
+<div class="disc">НДС учтён по Тарифам: на вал. контроль п. 10.1 он начисляется сверху (в пакетах тоже), в 3,6% по п. 10.6 уже включён. На остальные комиссии за перевод и конверсию Тарифы НДС не указывают, поэтому он не добавляется. Минимумы и максимумы в USD/EUR пересчитаны по введённым курсам ЦБ. Тарифы на перевод в USD в документе не указаны. KZT — только DEBT.</div></div>
+
+<div id="p2" style="display:none">
+<input type="search" id="q" placeholder="Поиск: наличные, СБП, ЗП, архив, валюта…">
+<div class="card" id="list"></div>
+</div></div>
+
+<script>
+const K=1e3,M=1e6,I=Infinity;
+const $=id=>document.getElementById(id);
+const num=id=>parseFloat(String($(id).value).replace(/\s/g,'').replace(',','.'))||0;
+const f=x=>Math.round(x).toLocaleString('ru-RU')+' ₽';
+const prog=(t,a)=>{let c=0,p=0;for(const[u,r]of t){if(a>p)c+=(Math.min(a,u)-p)*r/100;p=u}return c};
+const ST={ind_in:[[300*K,1.3],[1.5*M,1.7],[6*M,3.5],[I,6.7]],ind_out:[[300*K,2],[2*M,3],[6*M,3.7],[I,7]],ip:[[100*K,1],[300*K,1.5],[2*M,2],[6*M,3.7],[I,4]],wd:[[200*K,1.71],[600*K,3.3],[I,10]]};
+const UR_IN=[[150*K,0],[300*K,1],[1*M,1.7],[5*M,2.5],[I,6]],UR_OUT=[[100*K,1],[300*K,1.5],[1*M,2],[5*M,3.5],[I,7]],UR_IP=[[100*K,0],[300*K,1],[1.5*M,2],[I,3.5]];
+const P=[
+{n:'Легкий старт',fee:()=>750,pf:3,pp:199,dep:[30*K,.3,200],wd:[200*K,'ls'],
+ ii:[[150*K,1],[300*K,1.5],[700*K,2],[3*M,2.5],[6*M,3],[I,6]],io:[[300*K,1.5],[700*K,2.5],[3*M,3.5],[6*M,4],[I,7]],ip:[[300*K,1.5],[1.5*M,2],[3*M,3],[I,4]],fx:0},
+{n:'Уверенный рост',fee:()=>2300,pf:30,pp:100,dep:[120*K,.3,0],wd:[120*K],ii:UR_IN,io:UR_OUT,ip:UR_IP,fx:0},
+{n:'Уверенный рост Премиум',prem:1,fee:s=>s>=2*M?0:1150,pf:60,pp:100,dep:[I,0,0],wd:[120*K],ii:UR_IN,io:UR_OUT,ip:UR_IP,fx:0},
+{n:'Платежный драйв',fee:s=>s>=2*M?0:2700,pf:70,pp:50,dep:[2*M,.3,0],wd:[500*K],ii:[[700*K,0],[I,1]],io:[[I,1.5]],ip:[[I,1.5]],fx:0},
+{n:'ВЭД без границ',fee:()=>7700,pf:I,pp:0,dep:[300*K,.2,0],wd:[120*K],ii:[[600*K,0],[1.5*M,1.7],[5*M,2.7],[I,3.7]],io:[[100*K,0],[400*K,1.5],[1.5*M,2],[5*M,3],[I,4]],ip:[[400*K,0],[1.5*M,2],[5*M,3],[I,4]],fx:1},
+{n:'Все и сразу',fee:()=>9900,pf:I,pp:0,dep:[10*M,.2,0],wd:[500*K],ii:[[1*M,0],[I,1]],io:[[100*K,0],[500*K,1],[I,1.5]],ip:[[500*K,0],[I,1.3]],fx:1},
+{n:'Без пакета (стандартные)',std:1,fee:()=>2600,pf:0,pp:50,dep:[0,.5,300],wd:[0],ii:ST.ind_in,io:ST.ind_out,ip:ST.ip,fx:0}];
+const fxc=(a,n,pct,mn,mx)=>n>0?n*Math.min(Math.max(a/n*pct/100,mn),mx):(a>0?Math.max(a*pct/100,mn):0);
+function calc(p,v){
+ const L=[];let t=0;const add=(k,x)=>{if(x>0.5){L.push([k,x]);t+=x}};
+ add('Абонплата',p.fee(v.sdo));
+ const ex=p.pf===I?0:Math.max(0,v.pay-p.pf);add(p.std?'Платежи ('+v.pay+' × 50)':'Платежи сверх лимита ('+ex+' шт)',ex*p.pp);
+ const[fr,rt,mn]=p.dep;const de=Math.max(0,v.dep-fr);add('Приём наличных',de>0?Math.max(de*rt/100,mn):0);
+ let w=0;if(p.wd[1]==='ls'){w=Math.min(v.wd,p.wd[0])*.02;if(v.wd>0)w=Math.max(w,200)}
+ w+=prog(ST.wd,Math.max(0,v.wd-p.wd[0]));add('Снятие наличных',w);
+ add('Переводы физлицам (ОТП)',prog(p.ii,v.ii));add('Переводы физлицам (др. банки)',prog(p.io,v.io));add('Вывод доходов ИП (др. банки)',prog(p.ip,v.ip));
+ let e,o,vk;
+ if(p.fx){const m=v.sdo;const pe=m>=5*M?.15:m>=2*M?.4:.6,po=m>=3*M?.07:m>=2*M?.1:.2;
+  e=fxc(v.ea,v.en,pe,200*v.eur,750*v.eur);o=fxc(v.oa,v.on,po,35*v.usd,220*v.usd);vk=fxc(v.va,v.vn,.2,30*v.usd,1000*v.usd)}
+ else{e=fxc(v.ea,v.en,1,250*v.eur,I);o=fxc(v.oa,v.on,1,150*v.usd,I);vk=fxc(v.va,v.vn,.3,50*v.usd,I)}
+ add('Переводы в EUR',e);add('Переводы в др. валютах',o);add('Агент валютного контроля',vk);add('НДС на вал. контроль, сверху',vk*num('fv')/100);
+ return{t,L}}
+function run(){
+ const v={sdo:num('sdo'),pay:num('pay'),dep:num('dep'),wd:num('wd'),ii:num('ii'),io:num('io'),ip:num('ip'),usd:num('usd'),eur:num('eur'),ea:num('ea'),en:num('en'),oa:num('oa'),on:num('on'),va:num('va'),vn:num('vn')};
+ const ok=$('prem').checked;
+ const r=P.map(p=>({p,...calc(p,v)}));
+ const el=r.filter(x=>!x.p.prem||ok).sort((a,b)=>a.t-b.t);const best=el.find(x=>!x.p.std)||el[0];
+ const all=[...el,...r.filter(x=>x.p.prem&&!ok)];
+ $('out').innerHTML=all.map(x=>{const lock=x.p.prem&&!ok;
+  return`<div class="res ${x===best&&!lock?'best':''}" style="${lock?'opacity:.55':''}"><div class="rh"><div class="nm">${x.p.n}${x===best&&!lock?'<span class="tag">выгоднее</span>':''}</div><div><div class="pr">${f(x.t)}</div><div class="yr">${f(x.t*12)} / год</div></div></div>
+  <div class="bd">${x.L.map(l=>`<div><span>${l[0]}</span><span>${f(l[1])}</span></div>`).join('')||'<div>Нет начислений</div>'}</div>
+  ${lock?'<div class="wr">Нужны критерии по продуктам физлиц (отметьте галочку выше)</div>':''}
+  ${x.p.prem&&ok&&v.sdo<2*M?'<div class="wr">При СДО до 2 млн — 1 150 ₽; банк вправе перевести на «Уверенный рост», если критерии не выполняются на начало периода</div>':''}
+  ${x.p.n==='Платежный драйв'&&v.sdo<2*M?'<div class="wr">При СДО до 2 млн — 2 700 ₽; бесплатно только при СДО от 2 млн</div>':''}</div>`}).join('')}
+document.querySelectorAll('#p1 input').forEach(i=>i.addEventListener('input',run));
+const tab=k=>{[1,2,3].forEach(i=>{$('p'+i).style.display=i===k?'':'none';$('t'+i).className=i===k?'on':''});if(k===3)fxrun()};
+$('t1').onclick=()=>tab(1);$('t3').onclick=()=>tab(3);
+$('t2').onclick=()=>tab(2);
+
+const R=[
+['Подключение/смена/отключение пакета','Заявление',"Новый клиент — дата подписания Подтверждения. Смена: с 1-го рабочего дня после окончания расчётного периода. Отключение: услуга действует до последнего дня периода. Оплаченное не возвращается и не пересчитывается (п. 1.3, 1.8–1.10)."],
+['Когда списывается абонплата','Авансом',"1-й месяц — в дату подключения, далее с 1-го по 5-й рабочий день периода. Один пакет на все р/с, комиссия берётся с каждого рублёвого р/с (п. 1.2, 1.6)."],
+['Нет оборотов по счёту','Пакет',"Нет оборотов в периоде (при ежемесячной оплате) — следующий период бесплатно. Нет оборотов 3 периода подряд — спишут стоимость пакета, но не больше остатка. Оборот не считается: комиссии банка и ошибочные зачисления (п. 1.4)."],
+['Отключение пакета банком','Пакет',"За неоплату абонплаты на конец периода (п. 1.9.2)."],
+['Как считается СДО','Пакет',"Сумма остатков на утро каждого дня прошлого календарного месяца ÷ число дней. Только рублёвые р/с; без специальных счетов и счетов с начислением процентов (сноска 2)."],
+['«Уверенный рост Премиум» — условия','Пакет',"Нужен держатель продуктов банка для физлиц среди директора, доверенного, главбуха или бенефициара: СДО по счетам в банке от 1,5 млн, или вклады/комиссионный продукт от 1,5 млн, или кредиты от 3 млн (без рассрочки и автокредитов). Не выполняется на начало периода — банк вправе перевести на «Уверенный рост» (п. 1.12.1)."],
+['Пакеты на 6/12 месяцев','Пакет',"Легкий старт 3 750/6 750; Уверенный рост 11 520/20 700; ВЭД без границ 38 520/69 300; Все и сразу 49 530/89 100. У Премиум и Платежного драйва не предоставляется. Ранее подключённые на 6/12 мес. переводятся на Премиум с периодом 1 месяц."],
+['Что вне пакета','Пакет',"Всё, чего нет в пакете или сверх лимита, по стандартным тарифам (п. 1.7). Налоги и сборы — 0 ₽ (п. 3.2). Внутрибанковский электронный перевод — 0 ₽ (п. 3.1.2)."],
+['ЗП, дивиденды, соцвыплаты','0 ₽',"Во всех пакетах перевод физлицам на ЗП, дивиденды и соцплатежи — 0 ₽. ИП на свой счёт в ОТП — 0 ₽ во всех пакетах."],
+['Зарплатный проект','0 ₽ в пакетах',"Для клиентов со штатом от 2 человек, регистрация ЮЛ от 6 мес., ИП от 12 мес. Первый рублёвый р/с при ЗП-проекте от 5 человек — 400 ₽ вместо 2 500 ₽."],
+['Открытие рублёвого счёта','2 500 / 1 000 ₽',"Первый — 2 500 ₽ (взимается при первом поступлении, не позже 15-го рабочего дня; ИП «без встреч» — не берётся). Второй и далее — 1 000 ₽ (бесплатно в ряде кредитных случаев, п. 2.1). В пакетах — 0 ₽."],
+['Открытие валютного счёта','10 000 / 3 000 ₽',"EUR — 10 000 ₽, прочие валюты — 3 000 ₽ (в «Легком старте» прочие — 5 000 ₽; в «Платежном драйве» — по стандарту; в «ВЭД без границ» и «Все и сразу» — 0 ₽)."],
+['Ведение р/с вне пакета','2 600 / 5 000 ₽',"С Интернет-банком 2 600 ₽, без — 5 000 ₽ в месяц. Не берётся: нет операций и остатка в месяце, первый неполный месяц, аресты, залоговый счёт, счёт корп. карты (п. 2.3)."],
+['Нет операций 6 месяцев','20 000 ₽',"С 7-го месяца с даты последней операции — 20 000 ₽, но не больше остатка. Не операции: комиссии банка, проценты, возврат депозита, пополнение для погашения долга по комиссии (п. 2.3.6). Одинаково во всех пакетах."],
+['Ведение валютного счёта','0,01–1% / мес.',"EUR/USD/CHF — ставка по ступеням СДО (до 100 тыс. — 0,10%, CHF 0,17%, выше — до 2%); банк вправе менять ставку 0,01–1% с уведомлением за 5 дней. Прочие валюты — 2 500 ₽. Без операций 12 мес. — п. 2.4.3."],
+['Платежи вне пакета','50 / 600 ₽',"Электронный в другой банк — 50 ₽ (п. 3.3.1), на бумаге до 17:00 — 600 ₽, с 17:00 до 17:30 — ещё 0,15% (мин. 600, макс. 5 000). Срочный перевод через Банк России — 0,15%, мин. 300, макс. 1 000."],
+['СБП для юрлиц и ИП (B2B)','40 ₽',"Только через «ОТП Бизнес». Максимум 900 тыс. за перевод и 3 млн в месяц. В лимит платежей пакета не входит."],
+['Приём платежей до …','Время',"Электронные платежи в рублях: Москва и др. — до 19:00, Самара/Челябинск — 20:00, Новосибирск и др. — 21:00, Дальний Восток — 22:00; на бумаге — 17:00. После срока — следующим рабочим днём."],
+['Выдача наличных вне пакета','1,71 / 3,3 / 10%',"По заявке за 1 рабочий день: до 200 тыс. — 1,71%, 200–600 тыс. — 3,3%, свыше 600 тыс. — 10% (по сумме за операционный день). Без заявки — ещё +1%, максимум 10 000 у.е. (п. 6.2–6.3). На ЗП — 1%."],
+['Как использовать бесплатный лимит наличных','Важно',"Сначала провести операцию ровно на сумму бесплатного лимита, затем отдельно остаток. Тариф определяется по сумме в объявлении на взнос/заявлении на снятие (сноска 4)."],
+['Приём наличных вне пакета','0,5%, мин. 300 ₽',"Монеты — 4%, мин. 500. В иностранной валюте — 3%. Инкассация: купюры 0,15%/0,13%/0,12% по ступеням (п. 6.5–6.7)."],
+['Внутрибанк. переводы физлицам вне пакета','1,3–6,7%',"До 300 тыс. — 1,3%; до 1,5 млн — 1,7%; до 6 млн — 3,5%; выше — 6,7%. Нарастающим итогом за месяц, к части суммы в диапазоне (п. 3.12)."],
+['Переводы физлицам в др. банки вне пакета','2–7%',"До 300 тыс. — 2%; до 2 млн — 3%; до 6 млн — 3,7%; выше — 7% (п. 3.13). Вывод доходов ИП на свой счёт в др. банке: 1% / 1,5% / 2% / 3,7% / 4% (п. 3.14)."],
+['Переводы в EUR','1%, мин. 250 EUR',"Условия DEBT/SHAR. При сумме менее 5 000 EUR банк вправе отказать. Если банк-корреспондент не списал средства — комиссия возвращается (п. 4.2.1)."],
+['Переводы в CNY и др. валютах','1%, мин. 150 USD',"Для KZT — только DEBT. Возможна комиссия третьих банков. Валюты исполняются в срок T+0 (EUR до 12:30 МСК, CNY) или не позднее T+1."],
+['Зачисление валюты на счёт','2% EUR / 1% CNY',"По кодам 01030, 58030, 61100, 61135, 61140, 61162. Первые 30 дней после открытия счёта — не берётся по 61100/61135/61140 (п. 5.1)."],
+['Конверсия и покупка/продажа валюты','0% / 0,35%',"0% по счетам, открытым с 01.03.2022; 0,35% (до 100 тыс. у.е.) / 0,30% (свыше) по счетам до этой даты (п. 11.1)."],
+['НДС в Тарифах','Где сверху, где включён',"Сверху: вал. контроль п. 10.1 (и в пакетах), СПД п. 10.8, «Персональный валютный контролёр» п. 10.9, индивидуальная инкассация п. 7.1, проверка документов по аккредитиву п. 9.2.7, доп. затраты п. 12.3. Включён в цену: 3,6% и 1,2% (п. 10.6–10.7), п. 10.2–10.5, п. 2.2, 2.10, раздел 7, справки раздела 12. Ставка в Тарифах не указана; с 01.01.2026 — 22% (меняйте на вкладке «Валюта»)."],
+['Агент валютного контроля','0,3%, мин. 50 USD',"С каждого платежа/поступления, + НДС. Не берётся по кодам из Приложения 1. В «ВЭД без границ» и «Все и сразу» — 0,2%, мин. 30, макс. 1 000 USD (п. 10.1)."],
+['Валютный контроль — доп. услуги','Разное',"Постановка контракта на учёт: бесплатно за 1–2 дня; в день подачи — 2 400 ₽ (интернет-банк) / 4 800 ₽ (бумага). Снятие с учёта при переводе в другой банк — 12 000 ₽. СПД — 600 ₽. «Персональный валютный контролёр» — 20 000 ₽/мес. Проверка бумажных документов — 240 ₽."],
+['Платежи в пользу нерезидентов (риск!)','3,6%',"Дополнительная комиссия при куплях-продажах товаров без ввоза в РФ (коды 12060, 12800) и на счета в банках-нерезидентах (13020, 13800) на сумму свыше 3 млн ₽ (п. 10.6). Переводы в банки-нерезиденты — ещё +1% (п. 3.3.3)."],
+['Интернет-банк и подписи','0 ₽',"Абонплата 0 ₽. USB/MAC-токен — 2 500 ₽. Облачная подпись: первая бесплатно, вторая и далее — 1 500 ₽. Многоуровневая подпись: подключение 4 500 ₽ + 500 ₽/мес. (п. 8)."],
+['Справки, выписки','500 ₽',"Выписка по счёту — бесплатно; расширенная (больше 1 дня) — 500 ₽; дубликаты, справки — 500 ₽; оформление расчётного документа банком — 1 200 ₽ (п. 2.6–2.10)."],
+['Карточка образцов подписей','600 ₽',"Бесплатно в пакетах «Уверенный рост», «Премиум», «ВЭД без границ», «Все и сразу»; в «Легком старте» и «Платежном драйве» — 600 ₽. Чековая книжка: 330 ₽ (срочно — 400 ₽), бесплатно в тех же пакетах."],
+['Персональный менеджер','Пакет',"Только в «ВЭД без границ» и «Все и сразу»."],
+['Пакеты POS «Успешный партнёр»','Для POS-кредитования',"Light: 0 ₽ первые 6 мес., затем 0 ₽ при СДО от 500 тыс., иначе 990 ₽. PRO: 0 ₽ первые 6 мес., затем 0 ₽ при СДО от 2 млн, иначе 3 000 ₽. Нужен договор POS-кредитования; банк отключит при расторжении (п. 1.13)."],
+['Архивные пакеты','Нельзя подключить',"«Бизнес-Старт», «Бизнес-Развитие», «Бизнес-Развитие Премиум», «ВЭД», «Все включено» (подключение до 09.02.2025) и более старые — только для уже подключённых, повторно нельзя (Приложение 2)."],
+['Опечатки в PDF (подтверждено)','Учтено в расчёте',"«Легкий старт»: диапазон «свыше 300 тыс. до 700 млн — 2%» читается как до 700 тыс. «Уверенный рост Премиум»: «свыше 1500 тыс.» читается как свыше 150 тыс. Обе правки учтены в калькуляторе. GBP не используется."]
+];
+function rl(){const s=$('q').value.toLowerCase().trim();
+ const x=R.filter(r=>!s||r.join(' ').toLowerCase().includes(s));
+ $('list').innerHTML=x.map(r=>`<div class="it"><b>${r[0]}</b><div class="v">${r[1]}</div><div class="n">${r[2]}</div></div>`).join('')||'Ничего не найдено'}
+$('q').addEventListener('input',rl);rl();
+const LS={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
+const RK=['fu','fe','fc','fo','fb','fv'];
+RK.forEach(k=>{const s=LS.get('r_'+k);if(s)$(k).value=s});
+$('usd').value=$('fu').value;$('eur').value=$('fe').value;
+function fxrun(){
+ const u=num('fu'),e=num('fe'),c=num('fc'),o=num('fo'),b=num('fb'),cur=$('fcur').value,pay=$('fd').value==='pay',a=num('fa'),n=Math.max(1,num('fn')||1),s=num('sdo');
+ const cbr=cur==='EUR'?e:cur==='CNY'?c:o,rub=a*cbr,chk=id=>$(id).checked,ok=$('prem').checked;
+ const rows=P.filter(p=>!p.prem||ok).map(p=>{const L=[];let t=0;const add=(k,x)=>{if(x>0.5){L.push([k,x*n]);t+=x*n}};const F=p.fx;
+  if(pay){let pct,mn,mx;
+   if(cur==='EUR'){pct=F?(s>=5*M?.15:s>=2*M?.4:.6):1;mn=(F?200:250)*e;mx=F?750*e:I}
+   else{pct=F?(s>=3*M?.07:s>=2*M?.1:.2):1;mn=(F?35:150)*u;mx=F?220*u:I}
+   add('Комиссия за перевод',Math.min(Math.max(rub*pct/100,mn),mx));
+   if(chk('fnr'))add('Банк-нерезидент (+1%)',rub*.01);
+   if(chk('f36')&&rub>3*M)add('Доп. комиссия 3,6% (п. 10.6, НДС включён)',rub*.036)}
+  else if(chk('fcr'))add('Зачисление валюты',rub*(cur==='EUR'?.02:cur==='CNY'?.01:0));
+  if(!chk('fx1')){const pct=F?.2:.3,mn=(F?30:50)*u,mx=F?1000*u:I,vkf=Math.min(Math.max(rub*pct/100,mn),mx),vr=num('fv');add('Агент вал. контроля (п. 10.1)',vkf);add('НДС на вал. контроль, сверху ('+vr+'%)',vkf*vr/100)}
+  if(chk('fbuy')&&pay&&chk('fold'))add('Конверсия 0,35%',a*b*.0035);
+  if(chk('fab'))add('Абонплата пакета',p.fee(s)/n);
+  return{p,L,t}}).sort((x,y)=>x.t-y.t);
+ let w='';
+ if(!ok)w+='<div class="wr">«Уверенный рост Премиум» скрыт: отметьте критерии на вкладке «Подбор»</div>';
+ if(pay&&cur==='EUR'&&a<5000)w+='<div class="wr">Перевод менее 5 000 EUR: банк вправе отказать</div>';
+ if(cur==='OTH')w+='<div class="wr">Для KZT возможен только DEBT. Возможна комиссия третьих банков</div>';
+ if(!pay&&!chk('fcr'))w+='<div class="wr">Комиссия за зачисление не учтена (код не из п. 5.1)</div>';
+ const sp=chk('fbuy')&&pay&&b>0&&cbr>0?`<div class="card">Курс банка выше ЦБ: разница на ${a*n} ед. = <b>${f((b-cbr)*a*n)}</b> (это спред, а не комиссия по тарифам)<div class="n" style="font-size:12px;color:var(--mu)">Ориентир: ${f(rub*n)} по ЦБ, ${f(a*b*n)} по курсу банка</div></div>`:'';
+ $('fout').innerHTML=w+sp+rows.map((x,i)=>`<div class="res ${i===0?'best':''}"><div class="rh"><div class="nm">${x.p.n}${i===0?'<span class="tag">выгоднее</span>':''}</div><div class="pr">${f(x.t)}</div></div><div class="bd">${x.L.map(l=>`<div><span>${l[0]}</span><span>${f(l[1])}</span></div>`).join('')||'<div>Нет начислений</div>'}</div></div>`).join('');
+}
+function syncR(){$('usd').value=$('fu').value;$('eur').value=$('fe').value;RK.forEach(k=>LS.set('r_'+k,$(k).value));$('fdt').textContent='Сохранено: '+new Date().toLocaleString('ru-RU');run()}
+document.querySelectorAll('#p3 input,#p3 select').forEach(i=>i.addEventListener('input',()=>{if(RK.includes(i.id))syncR();fxrun()}));
+document.querySelectorAll('#p3 input[type=checkbox]').forEach(i=>i.addEventListener('change',fxrun));
+run();fxrun();
+</script></body></html>
